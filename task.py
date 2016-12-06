@@ -1,11 +1,10 @@
 import sys
-# from utils.envs import API_KEY, USER_NAME
+from utils.utils import create_files, get_kata_data
 
 def main(slug):
-	fname = '{}.py'.format(slug.replace('-', '_'))
-	sys.stdout = open(fname, 'w')
-	sys.stdout = open('test_' + fname, 'w')
+    create_files(slug)
+    print(get_kata_data(slug))
 
 
 if __name__ == "__main__":
-	main(sys.argv[1])
+    main(sys.argv[1])

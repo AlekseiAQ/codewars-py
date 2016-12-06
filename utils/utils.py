@@ -1,43 +1,42 @@
+import os.path
+import sys
 import requests
-from envs import *
+# import json
+from .envs import API_KEY, USER_NAME
 
 language = 'python'
-slug = 'head-tail-init-and-last'
+# slug = 'triangular-treasure'
 
-headers = {
-    'Authorization': API_KEY
-}
+access_key = API_KEY
 
-data = {
-  'strategy': 'random'
-}
+def get_kata_data(slug, access_key=API_KEY):
+    print(access_key)
+    url = 'https://www.codewars.com/api/v1/code-challenges/%s' % slug
+    params = {'access_key': access_key}
+    response = requests.get(url, params)
+    if response.status_code == 200:
+        data = response.json()
+        kata_rank = abs(int(data['rank']['id']))
+        return data
+    else:
+        raise Exception(response)
 
-url = 'https://www.codewars.com/api/v1/users/{}'.format(USER_NAME)
-kata_solution_url = 'https://www.codewars.com/api/v1/code-challenges/{}/{}/train'.format(
-	slug, language)
-# print(kata_solution_url)
-
-# example
-# r = requests.get(url, headers=headers)
-# r = requests.post(kata_solution_url, headers=headers)
-
-r = requests.get(url, headers=headers)
-
-
-
-
-# r = requests.post('https://www.codewars.com/api/v1/code-challenges/anything-to-integer/javascript/train', headers=headers)
-
-# kata = requests.get('https://www.codewars.com/api/v1/code-challenges/valid-braces')
-
-print(r.status_code)
-
-# print(r.json)
-# print(r.text)
-
-# print(r.json().keys())
-# print(r.json()['username'])
+def create_files(slug):
+    fname = '{}.py'.format(slug.replace('-', '_'))  
+    if os.path.isfile(fname):
+        print('Error... Files already exists...')
+    else:
+        sys.stdout = open(fname, 'w')
+        sys.stdout = open('test_' + fname, 'w')
 
 
-# requests.post('https://www.codewars.com/api/v1/code-challenges/javascript/train', headers=headers, data=data)
+# for key, value in data.items():
+#     print(key)
 
+# headers = {
+#     'Authorization': API_KEY
+# }
+
+# data = {
+#   'strategy': 'random'
+# }
