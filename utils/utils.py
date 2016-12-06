@@ -10,14 +10,13 @@ language = 'python'
 access_key = API_KEY
 
 def get_kata_data(slug, access_key=API_KEY):
-    print(access_key)
     url = 'https://www.codewars.com/api/v1/code-challenges/%s' % slug
     params = {'access_key': access_key}
     response = requests.get(url, params)
     if response.status_code == 200:
         data = response.json()
         kata_rank = abs(int(data['rank']['id']))
-        return data
+        return kata_rank
     else:
         raise Exception(response)
 
