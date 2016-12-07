@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-.venv3/
+venv3/
 
 # Environment variables
 utils/envs.py
