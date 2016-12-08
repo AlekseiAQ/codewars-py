@@ -1,9 +1,8 @@
 import sys
-from utils.utils import create_files, get_kata_data
+from utils.utils import new_solution
 
 def main(slug):
-    create_files(slug)
-    print(get_kata_data(slug))
+    new_solution(slug)
 
 
 if __name__ == "__main__":
