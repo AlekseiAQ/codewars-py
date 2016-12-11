@@ -1,0 +1,18 @@
+"""{{ kata.title }}"""
+
+import pytest
+
+from {{ kata.python }}.kyu_{{ kata.rank }}.{{ kata.filename }} import function
+
+EXAMPLES = (
+    ('arg', 'expected'),
+    [
+        (1, 2),
+        (3, 4),
+    ]
+)
+
+
+@pytest.mark.parametrize(*EXAMPLES)
+def test_returns_correct_result(arg, expected):
+    assert function(arg) == expected

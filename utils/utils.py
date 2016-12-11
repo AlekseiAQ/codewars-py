@@ -1,14 +1,25 @@
 import os.path
 import sys
-import requests
 from collections import namedtuple
+
+import requests
+from jinja2 import Environment, FileSystemLoader
+
 from .envs import API_KEY, USER_NAME
+
+
+PATH = os.path.dirname(os.path.abspath(__file__))
+TEMPLATE_ENVIRONMENT = Environment(
+    loader=FileSystemLoader(os.path.join(PATH, 'templates')))
 
 Kata = namedtuple('Kata', 'name url slug rank description')
 
 # language = 'python'
 
 access_key = API_KEY
+
+def render_template(template_filename, context):
+    return TEMPLATE_ENVIRONMENT.get_template(template_filename).render(context)
 
 def get_kata_data(slug, access_key):
     url = 'https://www.codewars.com/api/v1/code-challenges/%s' % slug
@@ -48,13 +59,25 @@ def create_file(data, file_type):
         full_path = os.path.join(directory, filename)
     else:
         raise ValueError('Unknown file type')
+        
+    context = {
+        'kata': {
+            'title': data.name,
+            'filename': data.slug.replace('-', '_'),
+            'url': data.url,
+            'description': data.description,
+            'rank': data.rank,
+        }
+    }
+
+    template = render_template('%s.jinja2' % file_type, context) + '\n'
 
     if not os.path.isdir(directory):
         os.makedirs(directory)
 
     if not os.path.isfile(full_path):
         with open(full_path, 'w') as file:
-            pass
+            file.write(template)
 
 
 def create_solution_file(data):
