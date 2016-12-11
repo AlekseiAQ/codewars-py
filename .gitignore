@@ -6,3 +6,6 @@ venv3/
 
 # Environment variables
 utils/envs.py
+
+# Unit test / coverage reports
+.cache
