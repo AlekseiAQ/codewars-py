@@ -1,6 +1,6 @@
 import unittest
 
-from target_date import date_nb_days
+from solutions.kyu_7.target_date import date_nb_days
 
 
 class DateNbDaysTest(unittest.TestCase):
