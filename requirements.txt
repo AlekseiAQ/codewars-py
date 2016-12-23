@@ -1,5 +1,13 @@
 Jinja2==2.8
 MarkupSafe==0.23
+astroid==1.4.8
+isort==4.2.5
+lazy-object-proxy==1.2.2
+mccabe==0.5.2
 py==1.4.31
+pycodestyle==2.2.0
+pylint==1.6.4
 pytest==3.0.5
 requests==2.12.3
+six==1.10.0
+wrapt==1.10.8
