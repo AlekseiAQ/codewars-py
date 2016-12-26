@@ -43,5 +43,5 @@ The two arrays have the same size `(> 0)` given as parameter in function `comp`.
 def comp(array1, array2):
     try:
         return sorted([i ** 2 for i in array1]) == sorted(array2)
-    except:
+    except ValueError:
         return False

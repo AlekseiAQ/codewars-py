@@ -1,5 +1,5 @@
 [MESSAGES CONTROL]
-disable=locally-disabled, no-member, missing-docstring, invalid-name
+disable=locally-disabled, no-member, missing-docstring, invalid-name, line-too-long, trailing-whitespace
 
 [REPORTS]
 # Simplify pylint reports

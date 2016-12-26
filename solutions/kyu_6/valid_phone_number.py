@@ -18,5 +18,5 @@ validPhoneNumber("(098) 123 4567")  => returns false
 import re
 def validPhoneNumber(phoneNumber):
     print(phoneNumber)
-    r = re.compile('^\(\d{3}\) \d{3}-\d{4}$')
+    r = re.compile(r'^\(\d{3}\) \d{3}-\d{4}$')
     return r.match(phoneNumber) is not None

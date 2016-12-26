@@ -21,7 +21,7 @@ last ['x','y','z'] -- => z
 ```
 ```clojure
 (last [1,2,3,4]) ; => 4
-(last "xyz") ; => \z
+(last "xyz") ; => z
 ```
 ```javascript
 last( [1,2,3,4] ) // => 4

@@ -7,13 +7,13 @@ from solutions.kyu_6.calculate_string_rotation import shifted_diff
 EXAMPLES = (
     ('args', 'expected'),
     [
-        (("eecoff","coffee"), 4),
-        (("Moose","moose"), -1),
-        (("isn't","'tisn"), 2),
-        (("Esham","Esham"), 0),
-        ((" "," "), 0),
-        (("hoop","pooh"), -1),
-        (("  "," "), -1),
+        (("eecoff", "coffee"), 4),
+        (("Moose", "moose"), -1),
+        (("isn't", "'tisn"), 2),
+        (("Esham", "Esham"), 0),
+        ((" ", " "), 0),
+        (("hoop", "pooh"), -1),
+        (("  ", " "), -1),
     ]
 )
 

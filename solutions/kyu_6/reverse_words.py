@@ -19,5 +19,5 @@ reverseWords "double  spaces" -- "elbuod  secaps"
 """
 
 
-def reverse_words(str):
-    return ' '.join(word[::-1] for word in str.split(' '))
+def reverse_words(string):
+    return ' '.join(word[::-1] for word in string.split(' '))

@@ -17,5 +17,5 @@ Each value on the table should be equal to the value of multiplying the number i
 """
 
 
-def multiplication_table(row,col):
+def multiplication_table(row, col):
     return [[(i+1)*(j+1) for j in range(col)] for i in range(row)]

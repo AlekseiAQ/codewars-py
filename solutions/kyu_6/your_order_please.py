@@ -15,4 +15,4 @@ For an input: "is2 Thi1s T4est 3a" the function should return "Thi1s is2 3a T4es
 
 
 def order(sentence):
-    return ' '.join(sorted(sentence.split(), key=lambda word:sorted(word)))
+    return ' '.join(sorted(sentence.split(), key=lambda word: sorted(word)))

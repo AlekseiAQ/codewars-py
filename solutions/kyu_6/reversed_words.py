@@ -32,5 +32,5 @@ Kata.ReverseWords("The greatest victory is that which requires no battle");
 """
 
 
-def reverse_words(str):
-    return ' '.join(reversed(str.split(' ')))
+def reverse_words(string):
+    return ' '.join(reversed(string.split(' ')))
