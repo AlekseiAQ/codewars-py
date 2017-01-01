@@ -20,4 +20,4 @@ Testing: [1, 0, 1, 1] ==> 11
 
 
 def binary_array_to_number(arr):
-  return int("".join(map(str, arr)), 2)
+    return int("".join(map(str, arr)), 2)
