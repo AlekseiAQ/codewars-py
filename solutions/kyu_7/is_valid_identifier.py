@@ -24,4 +24,4 @@ import re
 
 
 def is_valid(idn):
-    return re.match('^[a-zA-Z_\$][a-zA-Z0-9_\$]*$', idn) != None
+    return re.match(r'^[a-zA-Z_\$][a-zA-Z0-9_\$]*$', idn) != None
