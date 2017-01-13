@@ -36,24 +36,9 @@ __NOTE:__ There will also be lists tested of lengths upwards of 10,000,000 eleme
 """
 
 
-def sum_pairs(ints, s):
-    min_el = None
-    min_pair = None
-    list_len = len(ints)
-    
-    for i, el1 in enumerate(ints):
-        if min_el and i >= min_el:
-            return min_pair
-        
-        for j in range(i+1, list_len):
-            el2 = ints[j]
-            if el1 + el2 == s:
-                if min_el is None or j < min_el:
-                    min_el = j
-                    min_pair = [el1, el2]
-                    list_len = j
-                break
-
-    return min_pair
-
-# [10, 3, 5, 7, 2, 3, 7, 1, 2, 3, 4 , 5]
+def sum_pairs(numbers, target_sum):
+    cache = set()
+    for number in numbers:
+        if target_sum - number in cache:
+            return [target_sum - number, number]
+        cache.add(number)
