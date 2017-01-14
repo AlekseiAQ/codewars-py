@@ -19,7 +19,7 @@ getPlanetName(3) # should return 'Earth'
 """
 
 
-def get_planet_name(id):
+def get_planet_name(id_):
     return {
         1: "Mercury",
         2: "Venus",
@@ -29,4 +29,4 @@ def get_planet_name(id):
         6: "Saturn",
         7: "Uranus",
         8: "Neptune",
-    }.get(id, None)
+    }.get(id_, None)
