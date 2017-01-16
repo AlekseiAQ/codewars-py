@@ -13,8 +13,8 @@ EXAMPLES = (
         ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 4), "Rajesh"),
         ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 5), "Howard"),
         ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 6), "Sheldon"),
-        ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 52), "Sheldon"),
-        # ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951), "Leonard"),
+        ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 52), "Penny"),
+        ((["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951), "Leonard"),
     ]
 )
 

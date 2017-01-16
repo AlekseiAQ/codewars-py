@@ -60,16 +60,19 @@ whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951)=="Leo
 
 
 def whoIsNext(names, r):
-    l = len(names)
-    l_prev = 0
+    cur_len = 5
     step = 0
-    while l < r:
-        l_prev = l
-        l = l + l * 2
+    while r > cur_len:
+        cur_len = 5 * 2 ** step
+        if r - cur_len > 0:
+            r = r - cur_len
+        else:
+            break        
         step += 1
-    r = r - l_prev
-    if r % 2 ** step == 0:
-        return names[r // 2 ** step - 1]
-    else:
-        return names[r // 2 ** step]
-    # return names[(r % 2 ** step)]
+    step_ = 0
+
+    while r > 0:
+        r = r - (2 ** step)
+        step_ += 1
+
+    return names[step_ - 1]
