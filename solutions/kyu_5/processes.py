@@ -1,3 +1,4 @@
+# pylint: disable=anomalous-backslash-in-string
 """Processes
 https://www.codewars.com/kata/processes
 
@@ -47,14 +48,14 @@ Good luck!
 """
 
 
-def processes(start, end, processes):
+def processes_(start, end, processes):
     path = []
     while start != end:
         tmp_start = start
         for process, from_res, to_res in processes:
             if start == from_res:
                 if path and process == path[-1]:
-                	continue
+                    continue
                 start = to_res
                 path.append(process)
         if tmp_start == start:
