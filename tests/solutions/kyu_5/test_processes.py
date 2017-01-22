@@ -2,7 +2,7 @@
 
 import pytest
 
-from solutions.kyu_5.processes import processes
+from solutions.kyu_5.processes import processes_
 
 
 test_processes = [
@@ -23,4 +23,4 @@ EXAMPLES = (
 
 @pytest.mark.parametrize(*EXAMPLES)
 def test_returns_correct_result(args, expected):
-    assert processes(*args) == expected
+    assert processes_(*args) == expected
