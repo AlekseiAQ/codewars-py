@@ -21,4 +21,4 @@ from functools import reduce
 def factorial(n):
     if n < 0:
         return None
-    return reduce(lambda x,y:x*y,[1]+list(range(1,n+1)))
+    return reduce(lambda x, y: x*y, [1] + list(range(1, n+1)))
