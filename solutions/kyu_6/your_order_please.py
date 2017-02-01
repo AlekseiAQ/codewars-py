@@ -1,3 +1,4 @@
+# pylint: disable=unnecessary-lambda
 """Your order,  please
 https://www.codewars.com/kata/your-order-please
 
