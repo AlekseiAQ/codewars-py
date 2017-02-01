@@ -11,4 +11,4 @@ Example:
 
 
 def switcheroo(s):
-    return s.translate(str.maketrans('ab','ba'))
+    return s.translate(str.maketrans('ab', 'ba'))

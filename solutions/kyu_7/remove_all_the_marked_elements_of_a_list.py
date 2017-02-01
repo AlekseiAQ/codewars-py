@@ -1,3 +1,4 @@
+# pylint: disable=no-self-use, too-few-public-methods
 """Remove All The Marked Elements of a List
 https://www.codewars.com/kata/remove-all-the-marked-elements-of-a-list
 
