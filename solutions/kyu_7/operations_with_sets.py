@@ -36,7 +36,8 @@ Enjoy it!
 
 
 def process_2arrays(arr1, arr2):
-    return [sum(arr1.count(el) for el in arr2),
-            sum(el not in arr2 for el in arr1) + sum(el not in arr1 for el in arr2),
-            sum(1 for el in arr1 if el not in arr2),
-            sum(1 for el in arr2 if el not in arr1)]
+    set1, set2 = set(arr1), set(arr2)
+    return [len(set1.intersection(set2)),
+            len(set1.symmetric_difference(set2)),
+            len(set1.difference(set2)),
+            len(set2.difference(set1))]
