@@ -20,5 +20,5 @@ def unite_unique(*args):
     tmp = []    
     for item in chain(*args):
         if item not in tmp:
-            tmp.append (item)
+            tmp.append(item)
     return tmp
