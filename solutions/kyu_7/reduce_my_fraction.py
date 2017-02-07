@@ -16,6 +16,6 @@ Note: This is an introductory Kata for a series... coming soon!
 from fractions import Fraction
 
 
-def reduce(fraction):
+def reduce_(fraction):
     fraction = Fraction(*fraction)
     return [fraction.numerator, fraction.denominator]
