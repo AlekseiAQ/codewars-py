@@ -49,4 +49,4 @@ from string import ascii_lowercase as alphabet
 
 
 def destroyer(input_sets):
-  return " ".join(c if c not in set.union(*input_sets) else "_" for c in alphabet)
+    return " ".join(c if c not in set.union(*input_sets) else "_" for c in alphabet)
