@@ -8,4 +8,4 @@ Example: if an array of size 123 is given and chunk size is 10 there will be 13 
 
 
 def make_parts(arr, chunksize):
-    return [ arr[i: i + chunksize] for i in range(0, len(arr), chunksize)]
+    return [arr[i: i + chunksize] for i in range(0, len(arr), chunksize)]

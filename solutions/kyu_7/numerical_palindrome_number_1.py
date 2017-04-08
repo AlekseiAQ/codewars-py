@@ -24,5 +24,5 @@ For a given number ```num```, write a function to test if it's a numerical palin
 
 def palindrome(num):
     if isinstance(num, int) and num > 0:
-        return(str(num) == str(num)[::-1])
+        return str(num) == str(num)[::-1]
     return "Not valid"
