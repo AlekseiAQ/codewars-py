@@ -17,4 +17,4 @@ from itertools import combinations
 
 
 def triangle_perimeter(t):
-    return sum(hypot(p.x-q.x,p.y-q.y) for p,q in combinations((t.a,t.b,t.c),2))
+    return sum(hypot(p.x-q.x, p.y-q.y) for p, q in combinations((t.a, t.b, t.c), 2))
