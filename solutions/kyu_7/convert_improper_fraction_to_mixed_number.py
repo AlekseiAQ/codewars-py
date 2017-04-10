@@ -23,4 +23,4 @@ NOTE: All fractions will be greater than 0.
 
 def get_mixed_num(fraction):
     a, b = map(int, fraction.split('/'))
-    return '{} {}/{}'.format(a // b , a % b, b)
+    return '{} {}/{}'.format(a // b, a % b, b)
