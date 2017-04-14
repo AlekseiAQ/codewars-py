@@ -1,3 +1,4 @@
+# pylint: disable=unused-import
 """Keep the Order
 https://www.codewars.com/kata/keep-the-order
 
