@@ -2,7 +2,7 @@
 
 ### My [Codewars](http://www.codewars.com/) Kata Python solutions. User name: [AlekseiAQ](https://www.codewars.com/users/AlekseiAQ) 
 ![codewars rank](https://www.codewars.com/users/AlekseiAQ/badges/large)  
-Solved mote then 500 katas(problems).
+Solved more then 500 katas(problems).
 
 ### Syntax Validation
 
