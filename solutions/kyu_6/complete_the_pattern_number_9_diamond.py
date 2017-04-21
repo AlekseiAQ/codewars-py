@@ -131,5 +131,6 @@ def make_line(n, i):
     m_line = ''.join(map(str, m_line))
     return indent + m_line + indent
 
+
 def pattern(n):
     return '\n'.join(make_line(n, i) for j in (range(1, n+1), range(n-1, 0, -1)) for i in j)
