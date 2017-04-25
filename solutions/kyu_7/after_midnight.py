@@ -49,5 +49,5 @@ from datetime import datetime, timedelta
 
 
 def day_and_time(mins):
-    date = datetime(2017, 4, 23, 0, 0) + timedelta(minutes = mins)
+    date = datetime(2017, 4, 23, 0, 0) + timedelta(minutes=mins)
     return "{} {:02}:{:02}".format(day_name[date.weekday()], date.hour, date.minute)
