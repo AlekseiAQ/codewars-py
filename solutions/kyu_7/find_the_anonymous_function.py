@@ -1,3 +1,4 @@
+# pylint: disable=unsubscriptable-object
 """Find the anonymous function
 https://www.codewars.com/kata/find-the-anonymous-function
 
@@ -16,5 +17,5 @@ Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Fun
 """
 
 
-def find_function(func,arr):
+def find_function(func, arr):
     return filter(filter(callable, func)[0], arr)
