@@ -25,6 +25,6 @@ output: "ivy"
 def missing(nums, s):
     s = s.replace(' ', '')
     try:
-        return ''.join(s[i].lower() for i in sorted(nums))
+        return ''.join(s[i] for i in sorted(nums)).lower()
     except IndexError:
         return "No mission today"
