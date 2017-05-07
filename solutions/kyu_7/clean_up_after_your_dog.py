@@ -1,3 +1,4 @@
+# pylint: disable=anomalous-backslash-in-string
 """Clean up after your dog
 https://www.codewars.com/kata/clean-up-after-your-dog
 
