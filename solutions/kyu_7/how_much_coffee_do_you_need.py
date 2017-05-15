@@ -21,11 +21,11 @@ Each event can be downcase/lowercase, or uppercase. If it is downcase/lowercase 
 """
 
 
-from collections import Counter
-
-
 def how_much_coffee(events):
-    c = Counter(events)
-    r = sum(c[event] for event in ['cw', 'cat', 'dog', 'movie']) +\
-        sum(c[event] * 2 for event in ['CW', 'CAT', 'DOG', 'MOVIE'])
-    return 'You need extra sleep' if r > 3 else r
+    events_dict = {}
+    for key in ['cw', 'cat', 'dog', 'movie']:
+        events_dict[key] = 1
+    for key in ['CW', 'CAT', 'DOG', 'MOVIE']:
+        events_dict[key] = 2
+    result = sum(events_dict.get(event, 0) for event in events)
+    return 'You need extra sleep' if result > 3 else result
