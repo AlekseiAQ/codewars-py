@@ -11,3 +11,7 @@ venv
 
 # Unit test / coverage reports
 .cache
+
+\.magicindex\.json
+
+\.magicindex\.json\.tmp
