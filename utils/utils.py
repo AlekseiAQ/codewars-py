@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-print(os.environ)
 if "API_KEY" not in os.environ:
     raise Exception("API_KEY not in os.environ")
 if "USER_NAME" not in os.environ:
