@@ -2,16 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-venv3/
-.venv/
 
 # Environment variables
-utils/envs.py
-venv
+.env
 
 # Unit test / coverage reports
 .cache
-
-\.magicindex\.json
-
-\.magicindex\.json\.tmp
